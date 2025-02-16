@@ -1,0 +1,7 @@
+﻿@model ForumProject.Models.Post
+
+<h2>@Model.Title</h2>
+<p>@Model.Content</p>
+<p><strong>Публикувано на:</strong> @Model.CreatedAt.ToString("dd-MM-yyyy HH:mm")</p>
+
+<a href="/Post/Index" class="btn btn-secondary">Назад към всички постове</a>

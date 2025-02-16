@@ -1,0 +1,32 @@
+﻿@model ForumProject.Models.User
+
+@{
+    ViewData["Title"] = "Редактиране на профил";
+}
+
+<h2>Редактиране на профил</h2>
+
+<form asp-action="EditProfile" method="post">
+    <input type="hidden" asp-for="Id" />
+
+    <div>
+        <label for="Name">Име:</label>
+        <input asp-for="Name" id="Name" required />
+        <span asp-validation-for="Name" class="text-danger"></span>
+    </div>
+
+    <div>
+        <label for="Email">Имейл:</label>
+        <input asp-for="Email" id="Email" type="email" required />
+        <span asp-validation-for="Email" class="text-danger"></span>
+    </div>
+
+    <div>
+        <label for="Password">Нова парола (по избор):</label>
+        <input type="password" name="password" id="Password" />
+    </div>
+
+    <button type="submit">Запази промените</button>
+</form>
+
+<a asp-action="Profile" asp-route-id="@Model.Id">Назад към профила</a>

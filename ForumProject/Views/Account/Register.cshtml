@@ -1,0 +1,22 @@
+﻿@model ForumProject.Models.User
+
+<h2>Регистрация</h2>
+
+<form method="post" asp-action="Register">
+    <div>
+        <label>Име:</label>
+        <input type="text" asp-for="Name" required />
+    </div>
+
+    <div>
+        <label>Имейл:</label>
+        <input type="email" asp-for="Email" required />
+    </div>
+
+    <div>
+        <label>Парола:</label>
+        <input type="password" asp-for="PasswordHash" required />
+    </div>
+
+    <button type="submit">Регистрирай се</button>
+</form>

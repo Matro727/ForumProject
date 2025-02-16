@@ -1,0 +1,7 @@
+﻿@model ForumProject.Models.User
+
+<h2>Профил на @Model.Name</h2>
+<p><strong>Имейл:</strong> @Model.Email</p>
+<p><strong>Дата на регистрация:</strong> @Model.CreatedAt</p>
+<a asp-action="EditProfile" class="btn btn-secondary">Редактиране на профил</a>
+<a asp-action="EditProfile" asp-route-id="@Model.Id">Редактирай профила</a>
